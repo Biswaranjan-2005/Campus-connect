@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="role-selection" class="page">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Campus Connect</span>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="hero-text">
+                <h1>Welcome to Campus Connect</h1>
+                <p>Your one-stop platform for internships, mentorship, and campus events. <br>Choose your role to get started.</p>
+            </div>
+            <div class="role-cards">
+                <div class="card" onclick="showSignIn()">
+                    <div class="icon-circle">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2>Student</h2>
+                    <p>Find internships, connect with mentors, and discover events to boost your career.</p>
+                    <a href="#" class="continue-link">Continue as Student →</a>
+                </div>
+                <div class="card">
+                    <div class="icon-circle">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h2>Alumni</h2>
+                    <p>Give back by mentoring students, posting opportunities, and reconnecting with your peers.</p>
+                    <a href="#" class="continue-link">Continue as Alumni →</a>
+                </div>
+                <div class="card">
+                    <div class="icon-circle">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h2>College</h2>
+                    <p>Manage events, verify alumni, and gain insights into student engagement and success.</p>
+                    <a href="#" class="continue-link">Continue as College →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="student-sign-in" class="page hidden">
+        <div class="container">
+            <a href="#" class="back-link" onclick="showRoleSelection()">
+                <i class="fas fa-arrow-left"></i> Back to role selection
+            </a>
+            <div class="login-card">
+                <h2>Student Sign In</h2>
+                <p class="subtitle">Access your student dashboard.</p>
+                <form onsubmit="event.preventDefault(); showDashboard();">
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="**********" required>
+                    </div>
+                    <button type="submit" class="sign-in-button">Sign In</button>
+                </form>
+                <div class="signup-link-container">
+                    <p>Don't have an account? <a href="#" class="signup-link" onclick="showSignUp()">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="student-sign-up" class="page hidden">
+        <div class="container">
+            <a href="#" class="back-link" onclick="showRoleSelection()">
+                <i class="fas fa-arrow-left"></i> Back to role selection
+            </a>
+            <div class="signup-card">
+                <h2>Student Sign Up</h2>
+                <p class="subtitle">Create your student account.</p>
+                <form onsubmit="event.preventDefault(); showSignIn()">
+                    <div class="input-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email-signup">Email Address</label>
+                        <input type="email" id="email-signup" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password-signup">Password</label>
+                        <input type="password" id="password-signup" name="password" placeholder="**********" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="**********" required>
+                    </div>
+                    <button type="submit" class="sign-up-button">Sign Up</button>
+                </form>
+                <div class="login-link-container">
+                    <p>Already have an account? <a href="#" class="login-link" onclick="showSignIn()">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="student-dashboard" class="page hidden">
+        <header class="dashboard-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Campus Connect</span>
+            </div>
+            <div class="user-info">
+                <span class="user-email">chakrabiswaranjan123@gmail.com</span>
+                <i class="fas fa-user-circle user-avatar" onclick="showProfile()"></i>
+                <button class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log Out
+                </button>
+            </div>
+        </header>
+        <main class="dashboard-content">
+            <div class="welcome-section">
+                <h1>Welcome, Chakrabiswaranjan123!</h1>
+                <p>What would you like to do today?</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card" onclick="showProfile()">
+                    <div class="card-header">
+                        <div class="card-icon-circle">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                    <h3>Internships</h3>
+                    <p>Find internships and freelance projects.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-header">
+                        <div class="card-icon-circle">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                    <h3>Hackathons</h3>
+                    <p>Compete in exciting coding challenges.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-header">
+                        <div class="card-icon-circle">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                    <h3>Mentors</h3>
+                    <p>Connect with experienced alumni.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-header">
+                        <div class="card-icon-circle">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                    <h3>Tech Talks</h3>
+                    <p>Learn from industry experts.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-header">
+                        <div class="card-icon-circle">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                    <h3>Communities</h3>
+                    <p>Join groups and share knowledge.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-header">
+                        <div class="card-icon-circle">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                    <h3>Feedback</h3>
+                    <p>Share your thoughts and suggestions.</p>
+                </div>
+            </div>
+        </main>
+        <footer class="dashboard-footer">
+            <p>&copy; 2023 Campus Connect. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="your-profile" class="page hidden">
+        <header class="dashboard-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Campus Connect</span>
+            </div>
+            <div class="user-info">
+                <span class="user-email">chakrabiswaranjan123@gmail.com</span>
+                <i class="fas fa-user-circle user-avatar"></i>
+                <button class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log Out
+                </button>
+            </div>
+        </header>
+
+        <main class="profile-content">
+            <a href="#" class="back-link" onclick="showDashboard()">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+            <div class="profile-card">
+                <div class="profile-icon">
+                    <div class="profile-icon-circle">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <h2>Your Profile</h2>
+                <p class="subtitle">Manage your personal information and upload your resume.</p>
+
+                <div class="resume-upload-section">
+                    <h3>Resume Upload</h3>
+                    <div class="upload-box">
+                        <i class="fas fa-file-upload"></i>
+                        <p class="upload-text">Upload a file or drag and drop</p>
+                        <p class="file-info">PDF up to 5MB</p>
+                    </div>
+                    <button class="upload-button">Upload Resume</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showSignIn() {
+            document.getElementById('role-selection').classList.add('hidden');
+            document.getElementById('student-sign-up').classList.add('hidden');
+            document.getElementById('student-sign-in').classList.remove('hidden');
+        }
+
+        function showSignUp() {
+            document.getElementById('student-sign-in').classList.add('hidden');
+            document.getElementById('student-sign-up').classList.remove('hidden');
+        }
+
+        function showRoleSelection() {
+            document.getElementById('student-sign-in').classList.add('hidden');
+            document.getElementById('student-sign-up').classList.add('hidden');
+            document.getElementById('role-selection').classList.remove('hidden');
+        }
+
+        function showDashboard() {
+            document.getElementById('student-sign-in').classList.add('hidden');
+            document.getElementById('your-profile').classList.add('hidden');
+            document.getElementById('student-dashboard').classList.remove('hidden');
+        }
+
+        function showProfile() {
+            document.getElementById('student-dashboard').classList.add('hidden');
+            document.getElementById('your-profile').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

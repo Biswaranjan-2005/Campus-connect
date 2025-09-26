@@ -1,0 +1,628 @@
+/* General Body and Font Styling */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Shared Header Style --- */
+
+.header, .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.logo i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #4c51bf;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-email {
+    font-size: 14px;
+    color: #6a7486;
+}
+
+.user-avatar {
+    font-size: 24px;
+    color: #4a5568;
+    cursor: pointer;
+}
+
+.logout-button {
+    background-color: #f0f4ff;
+    color: #4c51bf;
+    border: 1px solid #4c51bf;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.logout-button:hover {
+    background-color: #4c51bf;
+    color: #fff;
+}
+
+/* --- Role Selection Page Styles --- */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #1a202c;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6a7486;
+}
+
+.role-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #e0e7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-circle i {
+    font-size: 30px;
+    color: #4c51bf;
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #718096;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.continue-link {
+    color: #4c51bf;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.continue-link:hover {
+    color: #3f479e;
+}
+
+/* --- Student Sign In & Sign Up Page Styles --- */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.back-link {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    color: #4c51bf;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 10%;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Login/Signup Card Styling */
+.login-card, .signup-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2, .signup-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #1a202c;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+/* Form and Input Styling */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #4a5568;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #4a4a4a;
+    color: #e2e8f0;
+}
+
+.input-group input::placeholder {
+    color: #a0aec0;
+}
+
+/* Buttons and Links */
+.sign-in-button, .sign-up-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4c51bf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.sign-in-button:hover, .sign-up-button:hover {
+    background-color: #3f479e;
+}
+
+.signup-link-container, .login-link-container {
+    font-size: 14px;
+    color: #718096;
+}
+
+.signup-link, .login-link {
+    color: #4c51bf;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link:hover, .login-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Student Dashboard Page Styles --- */
+
+/* Dashboard Content */
+.dashboard-content {
+    flex-grow: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.welcome-section {
+    margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #6a7486;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon-circle i {
+    font-size: 24px;
+    color: #4c51bf;
+}
+
+.card-arrow {
+    font-size: 20px;
+    color: #a0aec0;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #718096;
+    line-height: 1.5;
+}
+
+/* Dashboard Footer */
+.dashboard-footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #a0aec0;
+    border-top: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+/* --- Your Profile Page Styles --- */
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-content .back-link {
+    align-self: flex-start;
+    margin-left: 10%;
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+.profile-card {
+    background-color: #fff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-icon {
+    margin-bottom: 20px;
+}
+
+.profile-icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e7ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon-circle i {
+    font-size: 40px;
+    color: #4c51bf;
+}
+
+.profile-card h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #1a202c;
+}
+
+.profile-card .subtitle {
+    font-size: 16px;
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+/* Resume Upload Section */
+.resume-upload-section {
+    width: 100%;
+}
+
+.resume-upload-section h3 {
+    text-align: left;
+    font-size: 18px;
+    color: #1a202c;
+    margin-bottom: 15px;
+}
+
+.upload-box {
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.upload-box i {
+    font-size: 40px;
+    color: #a0aec0;
+    margin-bottom: 10px;
+}
+
+.upload-text {
+    font-size: 16px;
+    color: #4c51bf;
+    font-weight: 600;
+    margin: 0;
+}
+
+.file-info {
+    font-size: 14px;
+    color: #718096;
+    margin: 5px 0 0;
+}
+
+.upload-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4c51bf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #3f479e;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-header {
+        padding: 15px 25px;
+    }
+    .dashboard-content {
+        padding: 30px 25px;
+    }
+    .welcome-section h1 {
+        font-size: 32px;
+    }
+    .feature-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .feature-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .role-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    .back-link {
+        top: 20px;
+        left: 20px;
+    }
+    .profile-content .back-link {
+        align-self: center;
+        margin-left: 0;
+    }
+    .login-card, .signup-card, .profile-card {
+        padding: 30px 20px;
+    }
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .user-email, .user-avatar, .logout-button {
+        margin-top: 5px;
+    }
+    .dashboard-content, .profile-content {
+        padding: 20px;
+    }
+    .welcome-section h1 {
+        font-size: 28px;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .feature-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 20px;
+    }
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text p {
+        font-size: 16px;
+    }
+    .card h2 {
+        font-size: 20px;
+    }
+    .dashboard-header {
+        padding: 15px 15px;
+    }
+    .dashboard-content {
+        padding: 15px;
+    }
+    .welcome-section h1 {
+        font-size: 24px;
+    }
+    .welcome-section p {
+        font-size: 16px;
+    }
+    .logout-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .feature-card h3 {
+        font-size: 20px;
+    }
+}
